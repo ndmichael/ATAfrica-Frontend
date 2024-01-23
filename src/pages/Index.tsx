@@ -33,21 +33,8 @@ import investment from '/images/investment.jpg'
 // import animated from '/images/animated.gif'
 
 import RiskManagement from "../components/RiskManagement"
-import DoneAllOutlined from "@mui/icons-material/DoneAllOutlined"
-import Navbar from "./layouts/Navbar"
 import Footer from "./layouts/Footer"
 
-
-// const theme = createTheme({
-//   palette: {
-//     primary: {
-//       main: green[500],
-//     },
-//     secondary: {
-//       main: '#f44336',
-//     },
-//   },
-// });
 
 
 const Index = () => {
