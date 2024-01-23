@@ -7,15 +7,29 @@ import Slider from '@mui/material/Slider';
 import Table from '@mui/material/Table';
 import TableBody from '@mui/material/TableBody';
 import TableCell from '@mui/material/TableCell';
-import TableContainer from '@mui/material/TableContainer';
 import TableHead from '@mui/material/TableHead';
 import TableRow from '@mui/material/TableRow';
-import Paper from '@mui/material/Paper';
+
+
+type riskData = {
+        nigeria_stocks?: string,
+        foreign_stocks?: string,
+        teck_stocks?: string,
+        emerging_stocks?: string,
+        nigeria_bonds?: string,
+        foreign_bonds?: string,
+        commodities?: string,
+        real_estate?: string
+}
+
+type riskValue = {
+    riskValue?: number
+}
 
 
 const RiskManagement = () => {
-    const [riskValue, setRiskValue] = useState(1)
-    const [data, setData] = useState({})
+    const [riskValue, setRiskValue] = useState<riskValue>(1)
+    const [data, setData] = useState<riskData>({})
     console.log(data)
     useEffect(()=>{
         fetchData()
@@ -41,7 +55,7 @@ const RiskManagement = () => {
                     step={1}
                     min={1}
                     max={10}
-                    onChange={(e) => setRiskValue(e.target.value)}
+                    onChange={(e) => setRiskValue((e.target as EventTarget).value)}
                     color='success'
                 />
             </Box>
