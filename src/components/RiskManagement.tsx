@@ -32,7 +32,7 @@ const RiskManagement = () => {
 
     const fetchData = async () => {
         const response = await axios.get(
-            `http://127.0.0.1:8000/api/robo/${riskValue}`
+            `https://web-production-449c2.up.railway.app/api/${riskValue}`
         )
         setData(response.data)
         {/*console.log(response.data.nigeria_bonds)*/}
