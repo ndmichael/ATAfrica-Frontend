@@ -23,7 +23,7 @@ type riskData = {
 }
 
 const RiskManagement = () => {
-    const [riskValue, setRiskValue] = useState<undefined | number | string>(1)
+    const [riskValue, setRiskValue] = useState<string>('1')
     const [data, setData] = useState<riskData>({})
     console.log(data)
     useEffect(()=>{
@@ -43,7 +43,7 @@ const RiskManagement = () => {
         <>
             <Box>
                 <Slider 
-                    value={riskValue}
+                    value={parseInt(riskValue)}
                     defaultValue={1}
                     aria-label="Default" 
                     valueLabelDisplay="auto" 
