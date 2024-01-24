@@ -22,13 +22,8 @@ type riskData = {
         real_estate?: string
 }
 
-type riskValue = {
-    riskValue?: number
-}
-
-
 const RiskManagement = () => {
-    const [riskValue, setRiskValue] = useState<riskValue>(1)
+    const [riskValue, setRiskValue] = useState<number>(1)
     const [data, setData] = useState<riskData>({})
     console.log(data)
     useEffect(()=>{
@@ -55,10 +50,10 @@ const RiskManagement = () => {
                     step={1}
                     min={1}
                     max={10}
-                    onChange={(e) => setRiskValue((e.target as EventTarget).value)}
+                    onChange={(e)=>(setRiskValue((e.target as HTMLSelectElement)?.value))}
                     color='success'
                 />
-            </Box>
+            </Box>I
 
             <Box>
                 {data? 

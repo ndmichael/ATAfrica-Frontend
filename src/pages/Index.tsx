@@ -35,8 +35,6 @@ import investment from '/images/investment.jpg'
 import RiskManagement from "../components/RiskManagement"
 import Footer from "./layouts/Footer"
 
-
-
 const Index = () => {
 
   return (
