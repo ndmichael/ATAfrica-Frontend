@@ -23,7 +23,7 @@ type riskData = {
 }
 
 const RiskManagement = () => {
-    const [riskValue, setRiskValue] = useState<number>(1)
+    const [riskValue, setRiskValue] = useState<number | undefined>(1)
     const [data, setData] = useState<riskData>({})
     console.log(data)
     useEffect(()=>{
@@ -50,7 +50,7 @@ const RiskManagement = () => {
                     step={1}
                     min={1}
                     max={10}
-                    onChange={(e)=>(setRiskValue((e.target as HTMLSelectElement)?.value))}
+                    onChange={(e)=>(setRiskValue((e.target as HTMLInputElement).valueAsNumber))}
                     color='success'
                 />
             </Box>I
