@@ -53,7 +53,7 @@ const RiskManagement = () => {
                     onChange={(e)=>(setRiskValue((e.target as HTMLInputElement).value))}
                     color='success'
                 />
-            </Box>I
+            </Box>
 
             <Box>
                 {data? 
